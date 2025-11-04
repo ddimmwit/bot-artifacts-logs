@@ -1,0 +1,2 @@
+    PID    PPID CLS RTPRIO PRI  NI %CPU %MEM   RSS    VSZ     ELAPSED CMD
+    967       1  RR     99 139   - 14.4  3.7 303908 1057460  03:49:41 /opt/aeza-bot/app/.venv/bin/python /opt/aeza-bot/app/bot.py

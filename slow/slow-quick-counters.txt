@@ -1,0 +1,6 @@
+sent_ok=37862
+send_failed=2597
+slow_ctx=13
+imap_err=0
+0
+send_loops=5371

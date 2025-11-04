@@ -1,0 +1,2 @@
+pid 967's current scheduling policy: SCHED_RR
+pid 967's current scheduling priority: 99

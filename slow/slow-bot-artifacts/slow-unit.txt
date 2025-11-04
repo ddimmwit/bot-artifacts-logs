@@ -1,0 +1,42 @@
+# /etc/systemd/system/telegram-bot.service
+[Unit]
+Description=Telegram bot (aiogram) long polling
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/bot/botg
+Environment=DATABASE_URL=postgresql+asyncpg://botuser:Hryehrpg43h3@localhost:5432/botdb
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONOPTIMIZE=2
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONFAULTHANDLER=0
+Environment=MALLOC_ARENA_MAX=2
+Environment=PYTHONMALLOC=malloc
+Environment=TZ=Europe/Moscow
+
+# 🔧 Безопасные и реалистичные лимиты
+LimitNOFILE=65536
+LimitNPROC=4096
+
+# ⚠️ Убрали опасный реалтайм (может убить систему на 4 ядрах)
+Nice=-5
+OOMScoreAdjust=-500
+IOWeight=800
+
+# ✅ Разрешаем использовать до 3.5 ядер из 4
+CPUQuota=350%
+
+ExecStart=/root/bot/.venv/bin/python /root/bot/botg/bot.py
+Restart=always
+RestartSec=3
+
+# Логирование в journal (удобно для мониторинга)
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=telegram-bot
+
+[Install]
+WantedBy=multi-user.target

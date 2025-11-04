@@ -1,0 +1,9 @@
+● telegram-bot.service - Telegram bot (aiogram) long polling
+     Loaded: loaded (/etc/systemd/system/telegram-bot.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2025-11-04 10:31:53 EST; 3h 25min ago
+   Main PID: 927 (python)
+      Tasks: 457 (limit: 9435)
+     Memory: 4.9G (peak: 5.3G)
+        CPU: 9h 32min 32.960s
+     CGroup: /system.slice/telegram-bot.service
+             └─927 /root/bot/.venv/bin/python /root/bot/botg/bot.py

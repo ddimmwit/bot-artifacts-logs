@@ -1,0 +1,2 @@
+pid 927's current scheduling policy: SCHED_OTHER
+pid 927's current scheduling priority: 0

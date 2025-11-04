@@ -1,0 +1,2 @@
+    PID    PPID CLS RTPRIO PRI  NI %CPU %MEM   RSS    VSZ     ELAPSED CMD
+    927       1  TS      -  24  -5  278 53.1 4320404 8232284 03:25:54 /root/bot/.venv/bin/python /root/bot/botg/bot.py

@@ -1,0 +1,11 @@
+● telegram-bot.service - Telegram bot (aiogram) long polling
+     Loaded: loaded (/etc/systemd/system/telegram-bot.service; enabled; preset: enabled)
+    Drop-In: /etc/systemd/system/telegram-bot.service.d
+             └─override.conf
+     Active: active (running) since Tue 2025-11-04 14:51:24 UTC; 3h 49min ago
+   Main PID: 967 (python)
+      Tasks: 66 (limit: 9433)
+     Memory: 346.0M (peak: 356.9M)
+        CPU: 33min 3.549s
+     CGroup: /system.slice/telegram-bot.service
+             └─967 /opt/aeza-bot/app/.venv/bin/python /opt/aeza-bot/app/bot.py
